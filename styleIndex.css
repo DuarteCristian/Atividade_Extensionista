@@ -1,0 +1,9 @@
+.button {
+    font-style: italic;
+    font-size: 40px;
+    tranparent: true;
+    background-color: transparent;
+    border: none;
+    color: rgb(65, 15, 202);
+
+}
