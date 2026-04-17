@@ -10,8 +10,20 @@
 </head>
 
 <body>
-    <button class="button">EncontrePet</button>
+    <button class="button" onclick="window.location.href='index.html'">EncontrePet</button>
+    <!-- Botão -->
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
+    <!-- Overlay (fundo escuro) -->
+    <div id="overlay" onclick="fecharMenu()"></div>
+    <!-- Menu -->
+    <div id="sidebar" class="sidebar">
+        <a href="perfil.html">Perfil</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="login.html">Sair</a>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

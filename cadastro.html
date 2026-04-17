@@ -11,17 +11,19 @@
 <body>
     <div class="container">
         <div class="form-box">
-            <h2>Cadastro</h2>
+            <div class="tela active" id="cadastro">
+                <h2>Cadastro</h2>
 
-            <form action="login.html">
-                <input type="text" placeholder="Nome completo" required>
-                <input type="email" placeholder="E-mail" required>
-                <input type="text" placeholder="Usuário" required>
-                <input type="password" placeholder=" Senha" required>
-                <input type="password" placeholder="Confirmar senha" required>
-                <button type="submit">Cadastrar</button>
-            </form>
+                <form action="login.html">
+                    <input type="nome" id="nome" placeholder="Nome completo" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <input type="usuario" id="usuario" placeholder="Usuário" required>
+                    <input type="password" id="senha" placeholder=" Senha" required>
+                    <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
+                    <button type="submit" onclick="cadastrar()">Cadastrar</button>
+                </form>
 
+            </div>
         </div>
     </div>
 

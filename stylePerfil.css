@@ -1,0 +1,22 @@
+.button {
+    font-style: italic;
+    font-size: 40px;
+    tranparent: true;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(6, 156, 243);
+    width: 1350px;
+}
+
+.perfil-box {
+    width: 320px;
+    padding: 25px;
+    margin: 40px auto;
+
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
