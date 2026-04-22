@@ -9,14 +9,100 @@
     width: 1350px;
 }
 
-.perfil-box {
+
+
+/* Card */
+.perfil-card {
+    background: #fff;
     width: 320px;
-    padding: 25px;
-    margin: 40px auto;
-
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    color: white;
-
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+}
+
+/* Header */
+.perfil-header {
+    background: rgb(6, 156, 243);
+    color: rgb(206, 9, 9);
+    text-align: center;
+    padding: 20px;
+}
+
+.avatar {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Body */
+.perfil-body {
+    padding: 20px;
+}
+
+.perfil-body label {
+    font-size: 14px;
+    color: #000000;
+}
+
+.perfil-body input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Botão */
+.btn-salvar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(6, 156, 243);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-salvar:hover {
+    background: #f2f0f3;
+}
+
+.titulo {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fffdfd;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.Sair {
+    width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(6, 156, 243);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    top: 600px;
+    left: 500px;
+
+}
+
+.Sair:hover {
+    background: #ff0000;
+}
+
+body {
+    background-image: url("imagens/perfil.jpg");
+    /* caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* não repete */
+
 }

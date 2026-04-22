@@ -10,14 +10,38 @@
 
 <body>
     <button class="button" onclick="window.location.href='index.html'">EncontrePet</button>
-    <div class="tela" id="perfil">
+    <h1 class="titulo">Minha conta</h1>
+    <div class="perfil-card">
+        <div class="perfil-header">
+            <div class="avatar">👤</div>
 
-        <div class="perfil-box">
-            <p><strong>Nome:</strong> <span id="nomePerfil"></span></p>
-            <p><strong>Email:</strong> <span id="emailPerfil"></span></p>
+        </div>
+
+        <div class="perfil-body">
+            <label class="titulo">Informações Pessoais </label>
+            <br><br>
+            <label>Nome completo</label>
+            <input type="text" id="nome">
+
+            <label>Email</label>
+            <input type="email" id="email" disabled>
+
+            <button class="btn-salvar">Salvar</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <button class="Sair"><a href="login.html">Sair da Conta</a></button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nome = localStorage.getItem("nomeUsuario");
+            const email = localStorage.getItem("emailUsuario");
+
+            console.log("Carregando:", nome, email);
+
+            document.getElementById("nome").value = nome || "";
+            document.getElementById("email").value = email || "";
+        });
+    </script>
 </body>
 
 </html>

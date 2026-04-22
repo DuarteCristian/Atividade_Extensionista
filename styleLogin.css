@@ -11,13 +11,14 @@ body {
 /* fonte paragrafo*/
 .P {
     font-size: 20px;
+
 }
 
 /* login*/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e6cfcf, #cfcfcf);
+    background: linear-gradient(to bottom, #bac8ee, #cfcfcf);
 }
 
 .container {
@@ -46,7 +47,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
 
-    background: red;
+    background: rgb(0, 119, 255);
     color: white;
     width: 50px;
     height: 50px;
@@ -79,12 +80,12 @@ body {
 
     border: none;
     border-radius: 20px;
-    background: red;
+    background: rgb(6, 156, 243);
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .login-box button:hover {
-    background: darkred;
+    background: rgb(0, 139, 63);
 }

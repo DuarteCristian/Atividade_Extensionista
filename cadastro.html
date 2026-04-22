@@ -14,15 +14,35 @@
             <div class="tela active" id="cadastro">
                 <h2>Cadastro</h2>
 
-                <form action="login.html">
-                    <input type="nome" id="nome" placeholder="Nome completo" required>
+                <form id="formCadastro">
+                    <input type="text" id="nome" placeholder="Nome completo" required>
                     <input type="email" id="email" placeholder="E-mail" required>
-                    <input type="usuario" id="usuario" placeholder="Usuário" required>
-                    <input type="password" id="senha" placeholder=" Senha" required>
+                    <input type="text" id="usuario" placeholder="Usuário" required>
+                    <input type="password" id="senha" placeholder="Senha" required>
                     <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
-                    <button type="submit" onclick="cadastrar()">Cadastrar</button>
+
+                    <button type="submit">Cadastrar</button>
                 </form>
 
+                <script>
+                    document.getElementById("formCadastro").addEventListener("submit", function (e) {
+                        e.preventDefault();
+
+                        const nome = document.getElementById("nome").value;
+                        const email = document.getElementById("email").value;
+
+                        // TESTE (IMPORTANTE)
+                        console.log("Salvando:", nome, email);
+
+                        localStorage.setItem("nomeUsuario", nome);
+                        localStorage.setItem("emailUsuario", email);
+
+                        // CONFIRMAÇÃO
+                        alert("Cadastro salvo!");
+
+                        window.location.href = "login.html";
+                    });
+                </script>
             </div>
         </div>
     </div>
