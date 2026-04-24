@@ -1,3 +1,4 @@
+/*Titulo com botao*/
 .button {
     font-style: italic;
     font-size: 40px;
@@ -9,10 +10,12 @@
     width: 100%;
 }
 
+/* Estilos para o corpo da página */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(159, 206, 250);
+    background-color: rgb(204, 220, 235);
+
 }
 
 /* Botão */
@@ -71,4 +74,60 @@ body {
 #overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+/* Estilos para o conteúdo principal */
+.welcome {
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 50px;
+    color: rgb(12, 12, 12);
+    font-weight: 700;
+    margin: 20px;
+
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+}
+
+/* Estilos para o botão de cadastro */
+.cadastro {
+    background-color: rgb(6, 156, 243);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin: 20px;
+
+}
+
+.P {
+    font-size: 18px;
+    color: #333;
+    margin: 20px;
+    margin-top: -20px;
+}
+
+btn {
+    background: #7B3FE4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* espaço entre ícone e texto */
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn i {
+    font-size: 16px;
 }
