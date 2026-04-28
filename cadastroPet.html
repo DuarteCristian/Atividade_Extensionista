@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CadastroPet</title>
+    <link rel="stylesheet" href="stylePetCadastro.css">
+</head>
+
+<body>
+    <button class="button" onclick="window.location.href='index.html'">EncontrePet</button>
+
+    <div class="container">
+        <div class="lado-esquerdo">
+            <h1 class="welcome">Criar Anúncio do Pet</h1><br>
+            <p class="P">Crie gratuitamente seu anúncio para acessar o Painel de Busca do pet.<br>
+                Onde você poderá
+                acessar
+                ferramentas de divulgação com eficácia comprovada no Brasil inteiro.</p>
+        </div>
+
+        <div class="lado-direito">
+            <div class="form-box">
+                <h1>Formulário</h1>
+
+                <label class="formulario" for="situacao">Situação</label>
+                <select id="situacao">
+                    <option>Perdido</option>
+                    <option>Procurando Tutor</option>
+                    <option>Para Adoção</option>
+                </select>
+                <br><br>
+                <label class="formulario" for="especie">Espécie</label>
+                <select id="especie">
+                    <option>Cachorro</option>
+                    <option>Gato</option>
+                    <option>Pássaro</option>
+                </select>
+                <br><br>
+                <label class="formulario" for="genero">Genero</label>
+                <select id="genero">
+                    <option>Macho</option>
+                    <option>Femêa</option>
+                </select>
+                <button class="cadastro" onclick="window.location.href='index.html'">
+                    menu inicial
+                </button>
+                <button class="prosseguir" onclick="window.location.href='descricaoPet.html'">
+                    Prosseguir
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
