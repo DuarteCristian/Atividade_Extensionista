@@ -39,6 +39,26 @@
         <i class="fa-solid fa-magnifying-glass"></i>
         Achei um Pet
     </button>
+    <br><br>
+    <p class="welcome">Pets Perdidos</p>
+    <div id="listaPets"></div>
+    <script>
+        let lista = JSON.parse(localStorage.getItem("pets")) || [];
+        let container = document.getElementById("listaPets");
+
+        lista.forEach(pet => {
+            let card = document.createElement("div");
+            card.classList.add("card");
+
+            card.innerHTML = `
+        <img src="${pet.foto}" width="150">
+        <h3>${pet.nome}</h3>
+        <p>${pet.descricao}</p>
+    `;
+
+            container.appendChild(card);
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 

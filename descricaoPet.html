@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrição do Pet</title>
+    <link rel="stylesheet" href="styleDescricaoPet.css">
+</head>
+
+<body>
+    <button class="button" onclick="window.location.href='index.html'">EncontrePet</button>
+
+    <div class="container">
+        <div class="lado-esquerdo">
+            <h1 class="welcome">Criar Anúncio do Pet</h1><br>
+            <p class="P">Crie gratuitamente seu anúncio para acessar o Painel de Busca do pet.<br>
+                Onde você poderá
+                acessar
+                ferramentas de divulgação com eficácia comprovada no Brasil inteiro.</p>
+        </div>
+        <div class="lado-direito">
+            <div class="form-box">
+                <h3>Adicione uma foto de seu pet</h3>
+                <form id="formPet">
+                    <input type="text" id="nome" placeholder="Nome do pet" required>
+                    <input type="text" id="descricao" placeholder="Descrição" required>
+                    <input type="file" id="foto" accept="image/*" required>
+                    <button class="prosseguir" type="submit">Cadastrar</button>
+                </form>
+                <script>
+                    document.getElementById("formPet").addEventListener("submit", function (e) {
+                        e.preventDefault();
+
+                        let nome = document.getElementById("nome").value;
+                        let descricao = document.getElementById("descricao").value;
+                        let fotoInput = document.getElementById("foto");
+
+                        let reader = new FileReader();
+
+                        reader.onload = function () {
+                            let fotoBase64 = reader.result;
+
+                            let pet = {
+                                nome: nome,
+                                descricao: descricao,
+                                foto: fotoBase64
+                            };
+
+                            // Pega lista existente ou cria nova
+                            let lista = JSON.parse(localStorage.getItem("pets")) || [];
+                            lista.push(pet);
+
+                            localStorage.setItem("pets", JSON.stringify(lista));
+
+                            alert("Pet cadastrado!");
+
+                            // Redireciona para página principal
+                            window.location.href = "index.html";
+                        };
+
+                        reader.readAsDataURL(fotoInput.files[0]);
+                    });
+                </script>
+
+
+</body>
+
+</html>
