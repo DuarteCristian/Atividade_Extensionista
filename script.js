@@ -10,3 +10,4 @@ function fecharMenu() {
 
 localStorage.setItem("nomeUsuario", nome);
 localStorage.setItem("nomeUsuario", "Cristian");
+

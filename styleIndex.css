@@ -143,19 +143,74 @@ body {
     height: 700px;
 }
 
+
+
 .card {
+    min-width: 250px;
     background: #fff;
     padding: 15px;
     border-radius: 12px;
     margin: 10px;
-    margin-top: -10px;
-    width: 250px;
-    height: 200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
 }
 
-#listaPets {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 85px;
+#lista-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+}
+
+.btn-excluir {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.perdido {
+    background-color: red;
+}
+
+#lista-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#seta-cards {
+    overflow: hidden;
+}
+
+.seta {
+    position: absolute;
+    background: transparent;
+    color: rgb(247, 0, 0);
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 40px;
+    margin-top: -600px;
+}
+
+.esquerda {
+    left: 0;
+}
+
+.direita {
+    right: 0;
 }

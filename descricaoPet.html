@@ -23,18 +23,26 @@
             <div class="form-box">
                 <h3>Adicione uma foto de seu pet</h3>
                 <form id="formPet">
+                    <input type="text" id="perdido" placeholder="Situação" required>
                     <input type="text" id="nome" placeholder="Nome do pet" required>
                     <input type="text" id="descricao" placeholder="Descrição" required>
+                    <input type="text" id="localizacao" placeholder="Localização" required>
+                    <input type="text" id="genero" placeholder="Gênero" required>
                     <input type="file" id="foto" accept="image/*" required>
                     <button class="prosseguir" type="submit">Cadastrar</button>
+                    <button class="cadastro" onclick="window.location.href='index.html'">
+                        menu inicial
+                    </button>
                 </form>
                 <script>
                     document.getElementById("formPet").addEventListener("submit", function (e) {
                         e.preventDefault();
-
+                        let situacao = document.getElementById("perdido").value;
                         let nome = document.getElementById("nome").value;
                         let descricao = document.getElementById("descricao").value;
                         let fotoInput = document.getElementById("foto");
+                        let localizacao = document.getElementById("localizacao").value;
+                        let genero = document.getElementById("genero").value;
 
                         let reader = new FileReader();
 
@@ -42,9 +50,13 @@
                             let fotoBase64 = reader.result;
 
                             let pet = {
+                                id: Date.now(),
+                                situacao: situacao,
                                 nome: nome,
                                 descricao: descricao,
-                                foto: fotoBase64
+                                foto: fotoBase64,
+                                localizacao: localizacao,
+                                genero: genero
                             };
 
                             // Pega lista existente ou cria nova

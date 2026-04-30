@@ -31,7 +31,7 @@
         Crie seu anúncio gratuito agora mesmo para ter acesso ao
         Painel de Busca.</p>
 
-    <button class="cadastro" onclick="window.location.href='cadastroPet.html'">
+    <button class="cadastro" onclick="window.location.href='descricaoPet.html'">
         <i class="fa-solid fa-magnifying-glass"></i>
         Buscar Pet
     </button>
@@ -41,10 +41,30 @@
     </button>
     <br><br>
     <p class="welcome">Pets Perdidos</p>
-    <div id="listaPets"></div>
+    <div id="lista-cards"></div>
+    <div class="carrossel">
+
+        <button class="seta esquerda" onclick="rolarCards(-300)">❮</button>
+
+        <div id="lista-cards">
+            <!-- seus cards aqui -->
+        </div>
+
+        <button class="seta direita" onclick="rolarCards(300)">❯</button>
+
+    </div>
+
     <script>
+        function rolarCards(valor) {
+            const container = document.getElementById("lista-cards");
+            container.scrollBy({
+                left: valor,
+                behavior: "smooth"
+            });
+        }
+
         let lista = JSON.parse(localStorage.getItem("pets")) || [];
-        let container = document.getElementById("listaPets");
+        let container = document.getElementById("lista-cards");
 
         lista.forEach(pet => {
             let card = document.createElement("div");
@@ -52,10 +72,27 @@
 
             card.innerHTML = `
         <img src="${pet.foto}" width="150">
-        <h3>${pet.nome}</h3>
-        <p>${pet.descricao}</p>
+        <p class="perdido">Situação: ${pet.situacao}</p>
+        <p>Nome:  ${pet.nome}</p>
+        <p>Descrição: ${pet.descricao}</p>
+        <p>Ultimo lugar visto: ${pet.localizacao}</p>
+        <p>Gênero: ${pet.genero}</p>
+         <button class="btn-excluir">Excluir</button>
     `;
+            card.querySelector(".btn-excluir").addEventListener("click", function () {
 
+                // pega lista do localStorage
+                let lista = JSON.parse(localStorage.getItem("pets")) || [];
+
+                // remove o pet pelo ID
+                lista = lista.filter(p => p.id !== pet.id);
+
+                // salva novamente
+                localStorage.setItem("pets", JSON.stringify(lista));
+
+                // remove da tela
+                card.remove();
+            });
             container.appendChild(card);
         });
     </script>
